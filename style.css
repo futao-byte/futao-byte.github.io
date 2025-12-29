@@ -1,0 +1,60 @@
+/* ===== Global ===== */
+body {
+  margin: 0;
+  font-family: "JetBrains Mono", "Courier New", monospace;
+  background: #0b0f14;
+  color: #e6e6e6;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+/* ===== Neon Text ===== */
+h1, h2, h3 {
+  color: #7df9ff;
+  text-shadow: 0 0 8px rgba(125, 249, 255, 0.6);
+}
+
+.subtitle {
+  color: #b983ff;
+  margin-bottom: 40px;
+}
+
+/* ===== Navigation ===== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(11, 15, 20, 0.9);
+  border-bottom: 1px solid #1f2933;
+  padding: 15px 0;
+}
+
+nav a {
+  margin: 0 20px;
+  color: #7df9ff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #b983ff;
+}
+
+/* ===== Card ===== */
+.card {
+  background: #121826;
+  border: 1px solid #1f2933;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  color: #555;
+  padding: 40px 0;
+}
