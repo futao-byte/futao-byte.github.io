@@ -2,15 +2,35 @@
 body {
   margin: 0;
   font-family: "JetBrains Mono", "Courier New", monospace;
-  background: #0b0f14;
+  /* 背景图设置 */
+  background: url('bg-cyberpunk.jpg') no-repeat center center fixed;
+  background-size: cover; /* 自动拉伸铺满屏幕 */
   color: #e6e6e6;
 }
-
 /* ===== Layout ===== */
 .container {
   max-width: 900px;
   margin: auto;
   padding: 80px 20px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(11, 15, 20, 0.6); /* 半透明暗化层 */
+  z-index: -1; /* 保证文字在前面 */
+}
+
+@keyframes bg-glow {
+  0% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(20deg); }
+  100% { filter: hue-rotate(0deg); }
+}
+
+body {
+  animation: bg-glow 20s linear infinite;
 }
 
 /* ===== Neon Text ===== */
