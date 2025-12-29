@@ -58,7 +58,6 @@ h1, h2, h3 {
   animation: neon-flicker 1.5s infinite alternate;
 }
 
-/* Neon Flicker */
 @keyframes neon-flicker {
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
     text-shadow:
@@ -67,15 +66,10 @@ h1, h2, h3 {
       0 0 24px #b983ff,
       0 0 32px #7df9ff;
   }
-  20%, 22%, 24%, 55% {
-    text-shadow: none;
-  }
+  20%, 22%, 24%, 55% { text-shadow: none; }
 }
 
-.subtitle {
-  color: #b983ff;
-  margin-bottom: 40px;
-}
+.subtitle { color: #b983ff; margin-bottom: 40px; }
 
 /* ===== Navigation ===== */
 nav {
@@ -95,9 +89,7 @@ nav a {
   font-weight: 700;
 }
 
-nav a:hover {
-  color: #b983ff;
-}
+nav a:hover { color: #b983ff; }
 
 /* ===== Cards ===== */
 .card {
@@ -106,9 +98,7 @@ nav a:hover {
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 6px;
-  text-shadow:
-    0 0 6px #7df9ff,
-    0 0 12px #b983ff;
+  text-shadow: 0 0 6px #7df9ff, 0 0 12px #b983ff;
   color: #7df9ff;
   position: relative;
   z-index: 1;
@@ -121,11 +111,4 @@ footer {
   padding: 40px 0;
   position: relative;
   z-index: 1;
-}
-
-/* ===== Footer ===== */
-footer {
-  text-align: center;
-  color: #b983ff;
-  padding: 40px 0;
 }
