@@ -103,17 +103,18 @@ nav a:hover {
 }
 
 /* ===== Glitch Effect ===== */
+/* ===== Glitch Effect ===== */
 .card::before,
 .card::after {
-  content: attr(data-text);
+  content: "";  /* 改为空内容，不复制文本 */
   position: absolute;
   left: 0;
   width: 100%;
-  color: #7df9ff;
+  height: 100%;
   background: rgba(18, 24, 38, 0.7);
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  opacity: 0.3;  /* 降低透明度 */
   z-index: 0;
+  pointer-events: none; /* 防止干扰点击 */
 }
 
 .card::before {
