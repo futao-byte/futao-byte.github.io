@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 /* ===== Global ===== */
 body {
   margin: 0;
-  font-family: "JetBrains Mono", "Courier New", monospace;
+  font-family: 'Orbitron', monospace;
   background: url('bg-cyberpunk.jpg') no-repeat center center fixed;
   background-size: cover;
-  color: #e6e6e6;
-  animation: bg-glow 20s linear infinite; /* 背景轻微色彩流动 */
+  color: #7df9ff; /* 赛博朋克霓虹蓝 */
+  animation: bg-glow 20s linear infinite; 
 }
 
 /* 背景暗化层 */
@@ -33,30 +35,34 @@ body::before {
   border-radius: 8px;
 }
 
-/* ===== Neon Text ===== */
+/* ===== Neon Titles ===== */
 h1, h2, h3 {
   color: #7df9ff;
-  text-shadow: 0 0 8px rgba(125, 249, 255, 0.6);
+  text-shadow:
+    0 0 8px #7df9ff,
+    0 0 16px #b983ff,
+    0 0 24px #b983ff,
+    0 0 32px #7df9ff;
   animation: neon-flicker 1.5s infinite alternate;
+}
+
+/* Neon Flicker */
+@keyframes neon-flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow:
+      0 0 8px #7df9ff,
+      0 0 16px #b983ff,
+      0 0 24px #b983ff,
+      0 0 32px #7df9ff;
+  }
+  20%, 22%, 24%, 55% {
+    text-shadow: none;
+  }
 }
 
 .subtitle {
   color: #b983ff;
   margin-bottom: 40px;
-}
-
-/* ===== Neon Flicker ===== */
-@keyframes neon-flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    text-shadow:
-      0 0 4px #7df9ff,
-      0 0 8px #7df9ff,
-      0 0 16px #b983ff,
-      0 0 24px #b983ff;
-  }
-  20%, 22%, 24%, 55% {
-    text-shadow: none;
-  }
 }
 
 /* ===== Navigation ===== */
@@ -73,13 +79,14 @@ nav a {
   margin: 0 20px;
   color: #7df9ff;
   text-decoration: none;
+  font-weight: 700;
 }
 
 nav a:hover {
   color: #b983ff;
 }
 
-/* ===== Card ===== */
+/* ===== Cards ===== */
 .card {
   position: relative;
   overflow: hidden;
@@ -89,8 +96,9 @@ nav a:hover {
   margin-bottom: 20px;
   border-radius: 6px;
   text-shadow:
-    0 0 6px rgba(125, 249, 255, 0.6),
-    0 0 12px rgba(125, 249, 255, 0.4);
+    0 0 6px #7df9ff,
+    0 0 12px #b983ff;
+  color: #7df9ff;
 }
 
 /* ===== Glitch Effect ===== */
@@ -105,6 +113,36 @@ nav a:hover {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   z-index: 0;
+}
+
+.card::before {
+  animation: glitch-top 2s infinite linear alternate-reverse;
+}
+.card::after {
+  animation: glitch-bottom 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-top {
+  0% { clip: rect(0, 900px, 0, 0); transform: translate(0.5px, -0.5px); }
+  25% { clip: rect(0, 900px, 30px, 0); transform: translate(-0.5px, 0.5px); }
+  50% { clip: rect(0, 900px, 0, 0); transform: translate(0.5px, 0.5px); }
+  75% { clip: rect(0, 900px, 25px, 0); transform: translate(-0.5px, -0.5px); }
+  100% { clip: rect(0, 900px, 0, 0); transform: translate(0, 0); }
+}
+
+@keyframes glitch-bottom {
+  0% { clip: rect(0, 900px, 0, 0); transform: translate(-0.5px, 0.5px); }
+  25% { clip: rect(5px, 900px, 40px, 0); transform: translate(0.5px, -0.5px); }
+  50% { clip: rect(0, 900px, 0, 0); transform: translate(-0.5px, 0.5px); }
+  75% { clip: rect(10px, 900px, 35px, 0); transform: translate(0.5px, -0.5px); }
+  100% { clip: rect(0, 900px, 0, 0); transform: translate(0, 0); }
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  color: #b983ff;
+  padding: 40px 0;
 }
 
 .card::before {
