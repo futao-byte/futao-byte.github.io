@@ -89,8 +89,6 @@ nav a:hover {
 
 /* ===== Cards ===== */
 .card {
-  position: relative;
-  overflow: hidden;
   background: rgba(18, 24, 38, 0.7);
   border: 1px solid #1f2933;
   padding: 20px;
@@ -102,21 +100,6 @@ nav a:hover {
   color: #7df9ff;
 }
 
-/* ===== Glitch Effect ===== */
-/* .card::before,
-.card::after {
-  content: attr(data-text);
-  position: absolute;
-  left: 0;
-  width: 100%;
-  color: #7df9ff;
-  background: rgba(18, 24, 38, 0.7);
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  z-index: 0;
-} */
-
-/* 同时也要删除下面的 @keyframes glitch-top 和 @keyframes glitch-bottom 动画 */
 /* ===== Footer ===== */
 footer {
   text-align: center;
