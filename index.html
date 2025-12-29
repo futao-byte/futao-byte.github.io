@@ -1,12 +1,14 @@
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <!DOCTYPE html>
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
   <title>Tobey Fu</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
+
+<div id="particles-js"></div>
 
 <nav>
   <a href="index.html">HOME</a>
@@ -17,21 +19,34 @@
 
 <div class="container">
   <h1>Tobey Fu</h1>
-  <p class="subtitle">
-    Artificial Intelligence · Long-term Builder · Cyber Future
-  </p>
+  <p class="subtitle">Artificial Intelligence · Long-term Builder · Cyber Future</p>
 
   <div class="card">
-    <p>
-      我正在构建面向未来的智能系统。<br>
-      不追逐短期热点，只做长期有复利的事情。
-    </p>
+    <p>我正在构建面向未来的智能系统。<br>不追逐短期热点，只做长期有复利的事情。</p>
   </div>
 </div>
 
-<footer>
-  © 2025 Tobey Fu · GitHub Pages
-</footer>
+<footer>© 2025 Tobey Fu · GitHub Pages</footer>
+
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+    "color": { "value": ["#7df9ff","#b983ff"] },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.6, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false } },
+    "size": { "value": 3, "random": true, "anim": { "enable": true, "speed": 2, "size_min": 0.1, "sync": false } },
+    "line_linked": { "enable": true, "distance": 120, "color": "#7df9ff", "opacity": 0.3, "width": 1 },
+    "move": { "enable": true, "speed": 1, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+    "modes": { "repulse": { "distance": 100, "duration": 0.4 }, "push": { "particles_nb": 4 } }
+  },
+  "retina_detect": true
+});
+</script>
 
 </body>
 </html>
