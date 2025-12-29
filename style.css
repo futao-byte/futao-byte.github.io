@@ -14,9 +14,8 @@ body {
   margin: 0;
   font-family: 'Orbitron', monospace;
   background: url('bg-cyberpunk.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-size: cover; /* 保持全屏 */
   color: #7df9ff;
-  animation: bg-glow 20s linear infinite;
   overflow-x: hidden;
 }
 
@@ -26,14 +25,8 @@ body::before {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(11, 15, 20, 0.6);
+  background: rgba(11, 15, 20, 0.3); /* 透明度降低，背景更清楚 */
   z-index: -1;
-}
-
-@keyframes bg-glow {
-  0% { filter: hue-rotate(0deg); }
-  50% { filter: hue-rotate(20deg); }
-  100% { filter: hue-rotate(0deg); }
 }
 
 /* ===== Layout ===== */
@@ -41,11 +34,13 @@ body::before {
   max-width: 900px;
   margin: auto;
   padding: 80px 20px;
-  background: rgba(11, 15, 20, 0.6);
+  background: rgba(11, 15, 20, 0.4); /* 卡片半透明度降低，更能透出背景 */
   border-radius: 8px;
   position: relative;
   z-index: 1;
+  box-shadow: 0 0 20px rgba(125, 249, 255, 0.2); /* 轻微霓虹光晕，文字更清晰 */
 }
+
 
 /* ===== Neon Titles ===== */
 h1, h2, h3 {
@@ -93,7 +88,7 @@ nav a:hover { color: #b983ff; }
 
 /* ===== Cards ===== */
 .card {
-  background: rgba(18, 24, 38, 0.7);
+  background: rgba(18, 24, 38, 0.35); /* 半透明卡片，更透出背景 */
   border: 1px solid #1f2933;
   padding: 20px;
   margin-bottom: 20px;
@@ -102,6 +97,7 @@ nav a:hover { color: #b983ff; }
   color: #7df9ff;
   position: relative;
   z-index: 1;
+  backdrop-filter: blur(2px); /* 轻微毛玻璃效果，让文字更清晰同时保留背景 */
 }
 
 /* ===== Footer ===== */
