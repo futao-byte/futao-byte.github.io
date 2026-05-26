@@ -1,0 +1,14 @@
+{
+  "name": "cyber-blog",
+  "version": "1.0.0",
+  "description": "A cyberpunk personal blog powered by VitePress",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "markdown-it-mathjax3": "^4.3.2",
+    "vitepress": "^1.0.0-rc.44"
+  }
+}
